@@ -1,0 +1,15 @@
+class SFSafariViewController: UiViewController { 
+  weak var delegate: SFSafariViewControllerDelegate?
+
+init(URL: NSURL)
+
+}
+
+protocol SFSafariViewControllerDelegate : NSObjectProtocol {
+  optional func safariViewController(controller: SFSafariViewController,
+activityItemsForURL URL: NSURL, title: String?) -> [UIActivity]
+
+  optional func safariViewControllerDidFinish(controller: SFSafariViewController, 
+activityItemsForURl URL: NSURL, title: String?) -> [UIActivity]
+optionalfunc safariViewControllerDidFinish(controller: 
+SFSafariViewController)
